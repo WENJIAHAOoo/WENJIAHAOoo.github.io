@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Jiahao</title>
+  <title>网络编程-&gt;UDP | Jiahao</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="网络编程—UDPSOCKET通信 1.创建套接字2.绑定本地信息(ip&#x2F;port)3.接收&#x2F;发送数据4.关闭套接字  UDP socket（udp套接字） 创建udp套接字  注意SOCK_DGRAM是专属于UDP的 12import socketudp_socket = socket(AF_INET, SOCK_DGRAM)   用sendto来发送数据  如果是简单的直接发送固定的数据，要在该">
+<meta name="keywords" content="网络编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;undefined&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="网络编程-&gt;UDP">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;undefined&#x2F;2019-07-08%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8BUDP&#x2F;index.html">
 <meta property="og:site_name" content="Jiahao">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="网络编程—UDPSOCKET通信 1.创建套接字2.绑定本地信息(ip&#x2F;port)3.接收&#x2F;发送数据4.关闭套接字  UDP socket（udp套接字） 创建udp套接字  注意SOCK_DGRAM是专属于UDP的 12import socketudp_socket = socket(AF_INET, SOCK_DGRAM)   用sendto来发送数据  如果是简单的直接发送固定的数据，要在该">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-13T15:18:56.583Z">
+<meta property="og:updated_time" content="2019-11-14T12:58:42.100Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -181,14 +182,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2019-07-08 网络编程UDP" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      网络编程-&gt;UDP
     </h1>
   
 
@@ -200,8 +201,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/undefined/hello-world/" class="archive-article-date">
-        <time datetime="2019-11-13T15:18:56.583Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
+<a href="/undefined/2019-07-08%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8BUDP/" class="archive-article-date">
+        <time datetime="2019-07-08T06:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
 </a>
 
   
@@ -214,7 +215,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">73字</span>
+      <span class="post-count">588字</span>
     </span>
   </span>
 
@@ -223,7 +224,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -234,20 +235,46 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <h2 id="网络编程—UDP"><a href="#网络编程—UDP" class="headerlink" title="网络编程—UDP"></a>网络编程—UDP</h2><h3 id="SOCKET通信"><a href="#SOCKET通信" class="headerlink" title="SOCKET通信"></a>SOCKET通信</h3><blockquote>
+<p>1.创建套接字<br>2.绑定本地信息(ip/port)<br>3.接收/发送数据<br>4.关闭套接字</p>
+</blockquote>
+<h4 id="UDP-socket（udp套接字）"><a href="#UDP-socket（udp套接字）" class="headerlink" title="UDP socket（udp套接字）"></a>UDP socket（udp套接字）</h4><ul>
+<li><kbd>创建udp套接字</li>
+</ul>
+<p>注意SOCK_DGRAM是专属于UDP的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">udp_socket = socket(AF_INET, SOCK_DGRAM)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li><kbd>用<code>sendto</code>来发送数据</li>
+</ul>
+<h6 id="如果是简单的直接发送固定的数据，要在该数据前加一个-b，转换一下格式"><a href="#如果是简单的直接发送固定的数据，要在该数据前加一个-b，转换一下格式" class="headerlink" title="如果是简单的直接发送固定的数据，要在该数据前加一个 b，转换一下格式"></a>如果是简单的直接发送固定的数据，要在该数据前加一个 <code>b</code>，转换一下格式</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">udp_socket.sendto(<span class="string">b"要发送的数据"</span>, (对方的IP, port))</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h6 id="配合键盘输入数据（由一变量控制）来发送数据"><a href="#配合键盘输入数据（由一变量控制）来发送数据" class="headerlink" title="配合键盘输入数据（由一变量控制）来发送数据"></a>配合键盘输入数据（由一变量控制）来发送数据</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从键盘输入数据</span></span><br><span class="line">   send_data = input(<span class="string">"请输入要发送的数据"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 可以使用套接字收发数据</span></span><br><span class="line">   udp_socket.sendto(send_data.encode(<span class="string">"utf-8"</span>) , (对方的IP, port))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Windows编码是gbk, ubuntu编码是utf-8<br>注：若发送时没绑定端口，每次发送时都是系统随机分配的端口</p>
+</blockquote>
+<ul>
+<li><kbd>接收数据<code>recvfrom</code></li>
+</ul>
+<p>recv_data中 包含了“收到的信息”和“对方的ip and 端口”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  绑定一个本地信息</span></span><br><span class="line">   localaddr = (<span class="string">"ip"</span>,端口)</span><br><span class="line">   udp_socket.bind(localaddr)</span><br><span class="line">   </span><br><span class="line"><span class="comment">#  接收数据</span></span><br><span class="line">   recv_data = udp_socket.recvfrom(<span class="number">1024</span>)</span><br><span class="line">   </span><br><span class="line"><span class="comment">#  打印接收到的数据</span></span><br><span class="line">    print(recv_data)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<ul>
+<li><kbd>关闭套接字</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">udp_socket.close()</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<blockquote>
+<p><font color="orange" face="黑体"  size=4>udp聊天器</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_msg</span><span class="params">(udp_socket)</span>:</span></span><br><span class="line">    <span class="string">"""发送消息"""</span></span><br><span class="line">    <span class="comment"># 获取要发送的内容</span></span><br><span class="line">    dest_ip = input(<span class="string">"请输入对方的ip："</span>)</span><br><span class="line">    dest_port = int(input(<span class="string">"请输入对方的port："</span>))</span><br><span class="line">    send_data = input(<span class="string">"请输入要发送的内容："</span>)</span><br><span class="line">    udp_socket.sendto(send_data.encode(<span class="string">"gbk"</span>), (dest_ip, dest_port))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recv_msg</span><span class="params">(udp_socket)</span>:</span></span><br><span class="line">    <span class="string">"""接收数据"""</span></span><br><span class="line">    recv_data = udp_socket.recvfrom(<span class="number">1024</span>)</span><br><span class="line">    print(<span class="string">"%s:%s"</span> % ((recv_data[<span class="number">1</span>], recv_data[<span class="number">0</span>].decode(<span class="string">"gbk"</span>))))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 创建套接字</span></span><br><span class="line">    udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 绑定一个固定窗口</span></span><br><span class="line">    udp_socket.bind((<span class="string">""</span>, <span class="number">1122</span>))</span><br><span class="line">    <span class="comment"># while循环来处理事情</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># 发送</span></span><br><span class="line">        send_msg(udp_socket)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 接收并显示</span></span><br><span class="line">        recv_msg(udp_socket)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<blockquote>
+<p><font color="orange" face="黑体"  size=4>升级版<strong>udp</strong>聊天器</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_msg</span><span class="params">(udp_socket)</span>:</span></span><br><span class="line">    <span class="string">"""发送消息"""</span></span><br><span class="line">    <span class="comment"># 获取要发送的内容</span></span><br><span class="line">    dest_ip = input(<span class="string">"请输入对方的ip："</span>)</span><br><span class="line">    dest_port = int(input(<span class="string">"请输入对方的port："</span>))</span><br><span class="line">    send_data = input(<span class="string">"请输入要发送的内容："</span>)</span><br><span class="line">    udp_socket.sendto(send_data.encode(<span class="string">"gbk"</span>), (dest_ip, dest_port))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recv_msg</span><span class="params">(udp_socket)</span>:</span></span><br><span class="line">    <span class="string">"""接收数据"""</span></span><br><span class="line">    recv_data = udp_socket.recvfrom(<span class="number">1024</span>)</span><br><span class="line">    print(<span class="string">"%s:%s"</span> % ((recv_data[<span class="number">1</span>], recv_data[<span class="number">0</span>].decode(<span class="string">"gbk"</span>))))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 创建套接字</span></span><br><span class="line">    udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 绑定一个固定窗口</span></span><br><span class="line">    udp_socket.bind((<span class="string">""</span>, <span class="number">1122</span>))</span><br><span class="line">    <span class="comment"># while循环来处理事情</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        print(<span class="string">"-----我的聊天器1.0-----"</span>)</span><br><span class="line">        print(<span class="string">"1.发送消息"</span>)</span><br><span class="line">        print(<span class="string">"2.接收消息"</span>)</span><br><span class="line">        print(<span class="string">"0.退出系统"</span>)</span><br><span class="line">        op = input(<span class="string">"请输入你想要的功能："</span>)</span><br><span class="line">        <span class="keyword">if</span> op == <span class="string">"1"</span>:</span><br><span class="line">            <span class="comment"># 发送</span></span><br><span class="line">            send_msg(udp_socket)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">elif</span> op == <span class="string">"2"</span>:</span><br><span class="line">            <span class="comment"># 接收并显示</span></span><br><span class="line">            recv_msg(udp_socket)</span><br><span class="line">        <span class="keyword">elif</span> op == <span class="string">"0"</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"傻逼，输入有误，请重新输入"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
     
 
     
@@ -258,6 +285,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">网络编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -308,7 +346,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/undefined/hello-world/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/undefined/2019-07-08%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8BUDP/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -323,11 +361,15 @@
 
 <nav id="article-nav">
   
-  
-    <a href="/undefined/2019-07-10%20%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">网络编程-&gt;文件下载器</div>
-      <i class="icon-circle-right"></i>
+    <a href="/undefined/2019-07-09%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8BTCP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          网络编程-&gt;TCP
+        
+      </div>
     </a>
+  
   
 </nav>
 

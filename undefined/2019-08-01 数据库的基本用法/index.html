@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.wenjhaoo.cn">
-  <title>Archives: 2019/7 | Jiahao</title>
+  <title>数据库的基本用法 | Jiahao</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="欢迎来到知识天堂!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jiahao">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.wenjhaoo.cn&#x2F;archives&#x2F;2019&#x2F;07&#x2F;index.html">
+  <meta name="description" content="这是有关数据库的嗷">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库的基本用法">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.wenjhaoo.cn&#x2F;undefined&#x2F;2019-08-01%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95&#x2F;index.html">
 <meta property="og:site_name" content="Jiahao">
-<meta property="og:description" content="欢迎来到知识天堂!">
+<meta property="og:description" content="这是有关数据库的嗷">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-15T14:06:11.431Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -180,284 +182,216 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2019-08-01 数据库的基本用法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019-07-20%20web%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-        <time datetime="2019-07-20T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019-07-20%20web%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank">web服务器</a>
   
+    <h1 class="article-title" itemprop="name">
+      数据库的基本用法
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/undefined/2019-08-01%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="archive-article-date">
+        <time datetime="2019-08-01T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.7k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">13分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>这是有关数据库的嗷</p>
+<a id="more"></a>
+
+<h3 id="数据的准备"><a href="#数据的准备" class="headerlink" title="数据的准备"></a>数据的准备</h3><ul>
+<li>基本的数据准备都如此<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建一个数据库</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> python_test <span class="keyword">charset</span>=utf8;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 使用一个数据库</span></span><br><span class="line"><span class="keyword">use</span> python_test;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 显示使用的当前数据是哪个?</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">database</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建一个数据表</span></span><br><span class="line"><span class="comment">-- students表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> students(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">default</span> <span class="string">''</span>,</span><br><span class="line">    age <span class="built_in">tinyint</span> <span class="keyword">unsigned</span> <span class="keyword">default</span> <span class="number">0</span>,</span><br><span class="line">    height <span class="built_in">decimal</span>(<span class="number">5</span>,<span class="number">2</span>),</span><br><span class="line">    gender enum(<span class="string">'男'</span>,<span class="string">'女'</span>,<span class="string">'中性'</span>,<span class="string">'保密'</span>) <span class="keyword">default</span> <span class="string">'保密'</span>,</span><br><span class="line">    cls_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">default</span> <span class="number">0</span>,</span><br><span class="line">    is_delete <span class="built_in">bit</span> <span class="keyword">default</span> <span class="number">0</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- classes表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> classes (</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> auto_increment primary <span class="keyword">key</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 向students表中插入数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> students <span class="keyword">values</span></span><br><span class="line">(<span class="number">0</span>,<span class="string">'小明'</span>,<span class="number">18</span>,<span class="number">180.00</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'小月月'</span>,<span class="number">18</span>,<span class="number">180.00</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'彭于晏'</span>,<span class="number">29</span>,<span class="number">185.00</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'刘德华'</span>,<span class="number">59</span>,<span class="number">175.00</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'黄蓉'</span>,<span class="number">38</span>,<span class="number">160.00</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'凤姐'</span>,<span class="number">28</span>,<span class="number">150.00</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'王祖贤'</span>,<span class="number">18</span>,<span class="number">172.00</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'周杰伦'</span>,<span class="number">36</span>,<span class="literal">NULL</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'程坤'</span>,<span class="number">27</span>,<span class="number">181.00</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'刘亦菲'</span>,<span class="number">25</span>,<span class="number">166.00</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'金星'</span>,<span class="number">33</span>,<span class="number">162.00</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">1</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'静香'</span>,<span class="number">12</span>,<span class="number">180.00</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'郭靖'</span>,<span class="number">12</span>,<span class="number">170.00</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">0</span>),</span><br><span class="line">(<span class="number">0</span>,<span class="string">'周杰'</span>,<span class="number">34</span>,<span class="number">176.00</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 向classes表中插入数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> classes <span class="keyword">values</span> (<span class="number">0</span>, <span class="string">"python_01期"</span>), (<span class="number">0</span>, <span class="string">"python_02期"</span>);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h1><h4 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询所有字段</span></span><br><span class="line"><span class="comment">-- select * from 表名;</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students;</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> classes;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">id</span>, <span class="keyword">name</span> <span class="keyword">from</span> classes;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询指定字段</span></span><br><span class="line"><span class="comment">-- select 列1,列2,... from 表名;</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, age <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 使用 as 给字段起别名</span></span><br><span class="line"><span class="comment">-- select 字段 as 名字.... from 表名;</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">as</span> 姓名, age <span class="keyword">as</span> 年龄 <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- select 表名.字段 .... from 表名;</span></span><br><span class="line"><span class="keyword">select</span> students.name, students.age <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 可以通过 as 给表起别名</span></span><br><span class="line"><span class="comment">-- select 别名.字段 .... from 表名 as 别名;</span></span><br><span class="line"><span class="keyword">select</span> students.name, students.age <span class="keyword">from</span> students;</span><br><span class="line"><span class="keyword">select</span> s.name, s.age <span class="keyword">from</span> students <span class="keyword">as</span> s;</span><br><span class="line"><span class="comment">-- 失败的select students.name, students.age from students as s;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 消除重复行</span></span><br><span class="line"><span class="comment">-- distinct 字段</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> gender <span class="keyword">from</span> students;</span><br></pre></td></tr></table></figure>
+
+<h2 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 比较运算符</span></span><br><span class="line">	<span class="comment">-- select .... from 表名 where .....</span></span><br><span class="line">	<span class="comment">-- &gt;</span></span><br><span class="line">	<span class="comment">-- 查询大于18岁的信息</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age&gt;<span class="number">18</span>;</span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">id</span>,<span class="keyword">name</span>,gender <span class="keyword">from</span> students <span class="keyword">where</span> age&gt;<span class="number">18</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">-- &lt;</span></span><br><span class="line">	<span class="comment">-- 查询小于18岁的信息</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age&lt;<span class="number">18</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- &gt;=</span></span><br><span class="line">	<span class="comment">-- &lt;=</span></span><br><span class="line">	<span class="comment">-- 查询小于或者等于18岁的信息</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">-- =</span></span><br><span class="line">	<span class="comment">-- 查询年龄为18岁的所有学生的名字</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age=<span class="number">18</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- != 或者 &lt;&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 逻辑运算符</span></span><br><span class="line">	<span class="comment">-- and</span></span><br><span class="line">	<span class="comment">-- 18到28之间的所以学生信息</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age&gt;<span class="number">18</span> <span class="keyword">and</span> age&lt;<span class="number">28</span>;</span><br><span class="line">	<span class="comment">-- 失败select * from students where age&gt;18 and &lt;28;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 18岁以上的女性</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age&gt;<span class="number">18</span> <span class="keyword">and</span> gender=<span class="string">"女"</span>;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age&gt;<span class="number">18</span> <span class="keyword">and</span> gender=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- or</span></span><br><span class="line">	<span class="comment">-- 18以上或者身高查过180(包含)以上</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age&gt;<span class="number">18</span> <span class="keyword">or</span> height&gt;=<span class="number">180</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- not</span></span><br><span class="line">	<span class="comment">-- 不在 18岁以上的女性 这个范围内的信息</span></span><br><span class="line">	<span class="comment">-- select * from students where not age&gt;18 and gender=2;</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">not</span> (age&gt;<span class="number">18</span> <span class="keyword">and</span> gender=<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 年龄不是小于或者等于18 并且是女性</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> (<span class="keyword">not</span> age&lt;=<span class="number">18</span>) <span class="keyword">and</span> gender=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 模糊查询</span></span><br><span class="line">	<span class="comment">-- like </span></span><br><span class="line">	<span class="comment">-- % 替换1个或者多个</span></span><br><span class="line">	<span class="comment">-- _ 替换1个</span></span><br><span class="line">	<span class="comment">-- 查询姓名中 以 "小" 开始的名字</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">"小"</span>;</span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span> <span class="string">"小%"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询姓名中 有 "小" 所有的名字</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span> <span class="string">"%小%"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询有2个字的名字</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span> <span class="string">"__"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询有3个字的名字</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span> <span class="string">"__"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询至少有2个字的名字</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span> <span class="string">"__%"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- rlike 正则</span></span><br><span class="line">	<span class="comment">-- 查询以 周开始的姓名</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">rlike</span> <span class="string">"^周.*"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询以 周开始、伦结尾的姓名</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">rlike</span> <span class="string">"^周.*伦$"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 范围查询</span></span><br><span class="line">	<span class="comment">-- in (1, 3, 8)表示在一个非连续的范围内</span></span><br><span class="line">	<span class="comment">-- 查询 年龄为18、34的姓名</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span>,age <span class="keyword">from</span> students <span class="keyword">where</span> age=<span class="number">18</span> <span class="keyword">or</span> age=<span class="number">34</span>;</span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span>,age <span class="keyword">from</span> students <span class="keyword">where</span> age=<span class="number">18</span> <span class="keyword">or</span> age=<span class="number">34</span> <span class="keyword">or</span> age=<span class="number">12</span>;</span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span>,age <span class="keyword">from</span> students <span class="keyword">where</span> age <span class="keyword">in</span> (<span class="number">12</span>, <span class="number">18</span>, <span class="number">34</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- not in 不非连续的范围之内</span></span><br><span class="line">	<span class="comment">-- 年龄不是 18、34岁之间的信息</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span>,age <span class="keyword">from</span> students <span class="keyword">where</span> age <span class="keyword">not</span> <span class="keyword">in</span> (<span class="number">12</span>, <span class="number">18</span>, <span class="number">34</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">-- between ... and ...表示在一个连续的范围内</span></span><br><span class="line">	<span class="comment">-- 查询 年龄在18到34之间的的信息</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span>, age <span class="keyword">from</span> students <span class="keyword">where</span> age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- not between ... and ...表示不在一个连续的范围内</span></span><br><span class="line">	<span class="comment">-- 查询 年龄不在在18到34之间的的信息</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> age <span class="keyword">not</span> <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> <span class="keyword">not</span> age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>;</span><br><span class="line">	<span class="comment">-- 失败的select * from students where age not (between 18 and 34);</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">-- 空判断</span></span><br><span class="line">	<span class="comment">-- 判空is null</span></span><br><span class="line">	<span class="comment">-- 查询身高为空的信息</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> height <span class="keyword">is</span> <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> height <span class="keyword">is</span> <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> height <span class="keyword">is</span> <span class="literal">Null</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 判非空is not null</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> height <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 排序</span></span><br><span class="line">	<span class="comment">-- order by 字段</span></span><br><span class="line">	<span class="comment">-- asc从小到大排列，即升序</span></span><br><span class="line">	<span class="comment">-- desc从大到小排序，即降序</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询年龄在18到34岁之间的男性，按照年龄从小到到排序</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> (age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>) <span class="keyword">and</span> gender=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> (age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>) <span class="keyword">and</span> gender=<span class="number">1</span> <span class="keyword">order</span> <span class="keyword">by</span> age;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> (age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>) <span class="keyword">and</span> gender=<span class="number">1</span> <span class="keyword">order</span> <span class="keyword">by</span> age <span class="keyword">asc</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询年龄在18到34岁之间的女性，身高从高到矮排序</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> (age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>) <span class="keyword">and</span> gender=<span class="number">2</span> <span class="keyword">order</span> <span class="keyword">by</span> height <span class="keyword">desc</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">-- order by 多个字段</span></span><br><span class="line">	<span class="comment">-- 查询年龄在18到34岁之间的女性，身高从高到矮排序, 如果身高相同的情况下按照年龄从小到大排序</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> (age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>) <span class="keyword">and</span> gender=<span class="number">2</span> <span class="keyword">order</span> <span class="keyword">by</span> height <span class="keyword">desc</span>,<span class="keyword">id</span> <span class="keyword">desc</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询年龄在18到34岁之间的女性，身高从高到矮排序, 如果身高相同的情况下按照年龄从小到大排序,</span></span><br><span class="line">	<span class="comment">-- 如果年龄也相同那么按照id从大到小排序</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> (age <span class="keyword">between</span> <span class="number">18</span> <span class="keyword">and</span> <span class="number">34</span>) <span class="keyword">and</span> gender=<span class="number">2</span> <span class="keyword">order</span> <span class="keyword">by</span> height <span class="keyword">desc</span>,age <span class="keyword">asc</span>,<span class="keyword">id</span> <span class="keyword">desc</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 按照年龄从小到大、身高从高到矮的排序</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">order</span> <span class="keyword">by</span> age <span class="keyword">asc</span>, height <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 总数</span></span><br><span class="line"><span class="comment">-- count</span></span><br><span class="line"><span class="comment">-- 查询男性有多少人，女性有多少人</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">as</span> 男性人数 <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">as</span> 女性人数 <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 最大值</span></span><br><span class="line"><span class="comment">-- max</span></span><br><span class="line"><span class="comment">-- 查询最大的年龄</span></span><br><span class="line"><span class="keyword">select</span> age <span class="keyword">from</span> students;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">max</span>(age) <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询女性的最高 身高</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">max</span>(height) <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 最小值</span></span><br><span class="line"><span class="comment">-- min</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 求和</span></span><br><span class="line"><span class="comment">-- sum</span></span><br><span class="line"><span class="comment">-- 计算所有人的年龄总和</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(age) <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 平均值</span></span><br><span class="line"><span class="comment">-- avg</span></span><br><span class="line"><span class="comment">-- 计算平均年龄</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">avg</span>(age) <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 计算平均年龄 sum(age)/count(*)</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(age)/<span class="keyword">count</span>(*) <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 四舍五入 round(123.23 , 1) 保留1位小数</span></span><br><span class="line"><span class="comment">-- 计算所有人的平均年龄，保留2位小数</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">round</span>(<span class="keyword">sum</span>(age)/<span class="keyword">count</span>(*), <span class="number">2</span>) <span class="keyword">from</span> students;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">round</span>(<span class="keyword">sum</span>(age)/<span class="keyword">count</span>(*), <span class="number">3</span>) <span class="keyword">from</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 计算男性的平均身高 保留2位小数</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">round</span>(<span class="keyword">avg</span>(height), <span class="number">2</span>) <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span>;</span><br><span class="line"><span class="comment">-- select name, round(avg(height), 2) from students where gender=1;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 分页</span></span><br><span class="line">	<span class="comment">-- group by</span></span><br><span class="line">	<span class="comment">-- 按照性别分组,查询所有的性别</span></span><br><span class="line">	<span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> students <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line">	<span class="keyword">select</span> gender <span class="keyword">from</span> students <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line">	<span class="comment">-- 失败select * from students group by gender;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 计算每种性别中的人数</span></span><br><span class="line">	<span class="keyword">select</span> gender,<span class="keyword">count</span>(*) <span class="keyword">from</span> students <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 计算男性的人数</span></span><br><span class="line">	<span class="keyword">select</span> gender,<span class="keyword">count</span>(*) <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span> <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- group_concat(...)</span></span><br><span class="line">	<span class="comment">-- 查询同种性别中的姓名</span></span><br><span class="line"> 	<span class="keyword">select</span> gender,<span class="keyword">group_concat</span>(<span class="keyword">name</span>) <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span> <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line"> 	<span class="keyword">select</span> gender,<span class="keyword">group_concat</span>(<span class="keyword">name</span>, age, <span class="keyword">id</span>) <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span> <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line"> 	<span class="keyword">select</span> gender,<span class="keyword">group_concat</span>(<span class="keyword">name</span>, <span class="string">"_"</span>, age, <span class="string">" "</span>, <span class="keyword">id</span>) <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span> <span class="keyword">group</span> <span class="keyword">by</span> gender;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- having</span></span><br><span class="line">	<span class="comment">-- 查询平均年龄超过30岁的性别，以及姓名 having avg(age) &gt; 30</span></span><br><span class="line">	<span class="keyword">select</span> gender, <span class="keyword">group_concat</span>(<span class="keyword">name</span>),<span class="keyword">avg</span>(age) <span class="keyword">from</span> students <span class="keyword">group</span> <span class="keyword">by</span> gender <span class="keyword">having</span> <span class="keyword">avg</span>(age)&gt;<span class="number">30</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">-- 查询每种性别中的人数多于2个的信息</span></span><br><span class="line">	<span class="keyword">select</span> gender, <span class="keyword">group_concat</span>(<span class="keyword">name</span>) <span class="keyword">from</span> students <span class="keyword">group</span> <span class="keyword">by</span> gender <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--分页</span></span><br><span class="line"><span class="comment">-- limit start, count</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 限制查询出来的数据个数</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">1</span> <span class="keyword">limit</span> <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询前5个数据</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">limit</span> <span class="number">0</span>, <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询id6-10（包含）的书序</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">limit</span> <span class="number">5</span>, <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 每页显示2个，第1个页面</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 每页显示2个，第2个页面</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">limit</span> <span class="number">2</span>,<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 每页显示2个，第3个页面</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">limit</span> <span class="number">4</span>,<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 每页显示2个，第4个页面</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">limit</span> <span class="number">6</span>,<span class="number">2</span>; <span class="comment">-- -----&gt; limit (第N页-1)*每个的个数, 每页的个数;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 每页显示2个，显示第6页的信息, 按照年龄从小到大排序</span></span><br><span class="line"><span class="comment">-- 失败select * from students limit 2*(6-1),2;</span></span><br><span class="line"><span class="comment">-- 失败select * from students limit 10,2 order by age asc;</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">order</span> <span class="keyword">by</span> age <span class="keyword">asc</span> <span class="keyword">limit</span> <span class="number">10</span>,<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> gender=<span class="number">2</span> <span class="keyword">order</span> <span class="keyword">by</span> height <span class="keyword">desc</span> <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--连接查询</span></span><br><span class="line"><span class="comment">-- inner join ... on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- select ... from 表A inner join 表B;</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">inner</span> <span class="keyword">join</span> classes;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询 有能够对应班级的学生以及班级信息</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">on</span> students.cls_id=classes.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 按照要求显示姓名、班级</span></span><br><span class="line"><span class="keyword">select</span> students.*, classes.name <span class="keyword">from</span> students <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">on</span> students.cls_id=classes.id;</span><br><span class="line"><span class="keyword">select</span> students.name, classes.name <span class="keyword">from</span> students <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">on</span> students.cls_id=classes.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 给数据表起名字</span></span><br><span class="line"><span class="keyword">select</span> s.name, c.name <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询 有能够对应班级的学生以及班级信息，显示学生的所有信息，只显示班级名称</span></span><br><span class="line"><span class="keyword">select</span> s.*, c.name <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 在以上的查询中，将班级姓名显示在第1列</span></span><br><span class="line"><span class="keyword">select</span> c.name, s.* <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询 有能够对应班级的学生以及班级信息, 按照班级进行排序</span></span><br><span class="line"><span class="comment">-- select c.xxx s.xxx from student as s inner join clssses as c on .... order by ....;</span></span><br><span class="line"><span class="keyword">select</span> c.name, s.* <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id <span class="keyword">order</span> <span class="keyword">by</span> c.name;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 当时同一个班级的时候，按照学生的id进行从小到大排序</span></span><br><span class="line"><span class="keyword">select</span> c.name, s.* <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">inner</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id <span class="keyword">order</span> <span class="keyword">by</span> c.name,s.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- left join</span></span><br><span class="line"><span class="comment">-- 查询每位学生对应的班级信息</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">left</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询没有对应班级信息的学生</span></span><br><span class="line"><span class="comment">-- select ... from xxx as s left join xxx as c on..... where .....</span></span><br><span class="line"><span class="comment">-- select ... from xxx as s left join xxx as c on..... having .....</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">left</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id <span class="keyword">having</span> c.id <span class="keyword">is</span> <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">as</span> s <span class="keyword">left</span> <span class="keyword">join</span> classes <span class="keyword">as</span> c <span class="keyword">on</span> s.cls_id=c.id <span class="keyword">where</span> c.id <span class="keyword">is</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- right join   on</span></span><br><span class="line"><span class="comment">-- 将数据表名字互换位置，用left join完成</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自关联"><a href="#自关联" class="headerlink" title="自关联"></a>自关联</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 自关联</span></span><br><span class="line">	<span class="comment">-- 省级联动 url:http://demo.lanrenzhijia.com/2014/city0605/</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询所有省份</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> areas <span class="keyword">where</span> pid <span class="keyword">is</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询出山东省有哪些市</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> areas <span class="keyword">as</span> province <span class="keyword">inner</span> <span class="keyword">join</span> areas <span class="keyword">as</span> city <span class="keyword">on</span> city.pid=province.aid <span class="keyword">having</span> province.atitle=<span class="string">"山东省"</span>;</span><br><span class="line">	<span class="keyword">select</span> province.atitle, city.atitle <span class="keyword">from</span> areas <span class="keyword">as</span> province <span class="keyword">inner</span> <span class="keyword">join</span> areas <span class="keyword">as</span> city <span class="keyword">on</span> city.pid=province.aid <span class="keyword">having</span> province.atitle=<span class="string">"山东省"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询出青岛市有哪些县城</span></span><br><span class="line">	<span class="keyword">select</span> province.atitle, city.atitle <span class="keyword">from</span> areas <span class="keyword">as</span> province <span class="keyword">inner</span> <span class="keyword">join</span> areas <span class="keyword">as</span> city <span class="keyword">on</span> city.pid=province.aid <span class="keyword">having</span> province.atitle=<span class="string">"青岛市"</span>;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> areas <span class="keyword">where</span> pid=(<span class="keyword">select</span> aid <span class="keyword">from</span> areas <span class="keyword">where</span> atitle=<span class="string">"青岛市"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 子查询</span></span><br><span class="line">	<span class="comment">-- 标量子查询</span></span><br><span class="line">	<span class="comment">-- 查询出高于平均身高的信息</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 查询最高的男生信息</span></span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> height = <span class="number">188</span>;</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> students <span class="keyword">where</span> height = (<span class="keyword">select</span> <span class="keyword">max</span>(height) <span class="keyword">from</span> students);</span><br><span class="line"></span><br><span class="line">	<span class="comment">-- 列级子查询</span></span><br><span class="line">	<span class="comment">-- 查询学生的班级号能够对应的学生信息</span></span><br><span class="line">	<span class="comment">-- select * from students where cls_id in (select id from classes);</span></span><br></pre></td></tr></table></figure>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">服务器</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.wenjhaoo.cn/undefined/2019-08-01%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019-07-15%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2019-07-15T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/undefined/2019-08-05%20mysql%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          mysql
+        
+      </div>
+    </a>
+  
+  
+    <a href="/undefined/2019-07-20%20web%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">web服务器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019-07-15%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" target="_blank">正则表达式</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">正则表达式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019-07-14%20%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD%E5%99%A8/" class="archive-article-date">
-        <time datetime="2019-07-14T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019-07-14%20%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD%E5%99%A8/" target="_blank">并发下载器-&gt;爬虫</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">多任务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019-07-13%20%E5%8D%8F%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2019-07-13T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019-07-13%20%E5%8D%8F%E7%A8%8B/" target="_blank">多任务-&gt;协程</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">多任务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019-07-12%20%E8%BF%9B%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2019-07-12T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019-07-12%20%E8%BF%9B%E7%A8%8B/" target="_blank">多任务-&gt;进程</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">多任务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019-07-11%20%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2019-07-11T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019-07-11%20%E7%BA%BF%E7%A8%8B/" target="_blank">多任务-&gt;线程</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">多任务</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/07/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/07/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -498,8 +432,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

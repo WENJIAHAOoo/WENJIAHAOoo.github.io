@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Jiahao">
 <meta property="og:description" content="这是有关TCP&#x2F;UDP的文件下载器">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-14T13:13:29.276Z">
+<meta property="og:updated_time" content="2019-11-15T13:55:27.233Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -244,7 +244,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 1.创建套接字</span></span><br><span class="line">    tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2 获取服务器的ip和端口</span></span><br><span class="line">    dest_ip = input(<span class="string">"请输入下载服务器的ip:"</span>)</span><br><span class="line">    dest_port = int(input(<span class="string">"请输入下载服务器的port:"</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 3 链接服务器</span></span><br><span class="line">    tcp_socket.connect((dest_ip, dest_port))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4 获取下载的文件名</span></span><br><span class="line">    download_file_name = input(<span class="string">"请输入要下载的文件名字:"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 5 将文件名发送到服务器</span></span><br><span class="line">    tcp_socket.send(download_file_name.encode(<span class="string">"gbk"</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 6 接受文件中的数据</span></span><br><span class="line">    recv_data = tcp_socket.recv(<span class="number">1024</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> recv_data:</span><br><span class="line">        <span class="comment"># 7 保存接收到的数据到一个文件中</span></span><br><span class="line">        <span class="keyword">with</span> open(<span class="string">"[新]"</span> + download_file_name, <span class="string">"wb"</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(recv_data)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 8 关闭套接字</span></span><br><span class="line">    tcp_socket.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
 <hr>
-<hr>
 <blockquote>
 <p><font color="orange" face="黑体"  size=4>文件下载器—服务器版</p>
 </blockquote>
@@ -334,6 +333,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/undefined/2019-08-10%20mysql%E7%9A%84%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          mysql的高级用法
+        
+      </div>
+    </a>
   
   
     <a href="/undefined/2019-07-09%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8BTCP/" id="article-nav-older" class="article-nav-link-wrap">
@@ -500,6 +508,30 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">网络编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">多任务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">前端</a>
               </li>
             
             <div class="clearfix"></div>

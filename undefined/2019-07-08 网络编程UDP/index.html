@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Jiahao">
 <meta property="og:description" content="这是有关网络编程UDP的文章">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-14T13:14:10.485Z">
+<meta property="og:updated_time" content="2019-11-15T13:55:49.253Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -267,12 +267,10 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">udp_socket.close()</span><br></pre></td></tr></table></figure>
 <hr>
-<hr>
 <blockquote>
 <p><font color="orange" face="黑体"  size=4>udp聊天器</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_msg</span><span class="params">(udp_socket)</span>:</span></span><br><span class="line">    <span class="string">"""发送消息"""</span></span><br><span class="line">    <span class="comment"># 获取要发送的内容</span></span><br><span class="line">    dest_ip = input(<span class="string">"请输入对方的ip："</span>)</span><br><span class="line">    dest_port = int(input(<span class="string">"请输入对方的port："</span>))</span><br><span class="line">    send_data = input(<span class="string">"请输入要发送的内容："</span>)</span><br><span class="line">    udp_socket.sendto(send_data.encode(<span class="string">"gbk"</span>), (dest_ip, dest_port))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recv_msg</span><span class="params">(udp_socket)</span>:</span></span><br><span class="line">    <span class="string">"""接收数据"""</span></span><br><span class="line">    recv_data = udp_socket.recvfrom(<span class="number">1024</span>)</span><br><span class="line">    print(<span class="string">"%s:%s"</span> % ((recv_data[<span class="number">1</span>], recv_data[<span class="number">0</span>].decode(<span class="string">"gbk"</span>))))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 创建套接字</span></span><br><span class="line">    udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 绑定一个固定窗口</span></span><br><span class="line">    udp_socket.bind((<span class="string">""</span>, <span class="number">1122</span>))</span><br><span class="line">    <span class="comment"># while循环来处理事情</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># 发送</span></span><br><span class="line">        send_msg(udp_socket)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 接收并显示</span></span><br><span class="line">        recv_msg(udp_socket)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<hr>
 <hr>
 <blockquote>
 <p><font color="orange" face="黑体"  size=4>升级版<strong>udp</strong>聊天器</p>
@@ -533,6 +531,30 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">网络编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">多任务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">前端</a>
               </li>
             
             <div class="clearfix"></div>

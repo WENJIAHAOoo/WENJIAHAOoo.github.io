@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Jiahao">
 <meta property="og:description" content="加油!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T09:20:30.148Z">
+<meta property="og:updated_time" content="2019-11-18T09:27:19.035Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -260,42 +260,43 @@
 <p>其实，<strong>Python 的模块就是天然的单例模式</strong>，因为模块在第一次导入时，会生成 <code>.pyc</code> 文件，当第二次导入时，就会直接加载 <code>.pyc</code> 文件，而不会再次执行模块代码。因此，我们只需把相关的函数和数据定义在一个模块中，就可以获得一个单例对象了。</p>
 </blockquote>
 </li>
-<li><p>使用<strong>装饰器</strong></p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Singleton</span><span class="params">(cls)</span>:</span></span><br><span class="line">    _instance = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_singleton</span><span class="params">(*args, **kargs)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> _instance:</span><br><span class="line">            _instance[cls] = cls(*args, **kargs)</span><br><span class="line">        <span class="keyword">return</span> _instance[cls]</span><br><span class="line">    <span class="keyword">return</span> _singleton</span><br><span class="line"><span class="meta">@Singleton</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x=<span class="number">0</span>)</span>:</span></span><br><span class="line">        self.x = x</span><br><span class="line">a1 = A(<span class="number">2</span>)</span><br><span class="line">a2 = A(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-</blockquote>
+<li><p>使用装饰器</p>
 </li>
+</ul>
+</li>
+</ol>
+<pre><code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Singleton</span><span class="params">(cls)</span>:</span></span><br><span class="line">    _instance = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_singleton</span><span class="params">(*args, **kargs)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> _instance:</span><br><span class="line">        _instance[cls] = cls(*args, **kargs)</span><br><span class="line">        <span class="keyword">return</span> _instance[cls]</span><br><span class="line">    <span class="keyword">return</span> _singleton</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Singleton</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x=<span class="number">0</span>)</span>:</span></span><br><span class="line">    self.x = x</span><br><span class="line"></span><br><span class="line">a1 = A(<span class="number">2</span>)</span><br><span class="line">a2 = A(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+​</code></pre><ul>
 <li><p>使用<strong>共享属性</strong></p>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建实例时把所有实例的__dict__指向同一个字典,这样它们都具有相同的属性和方法(类的__dict__存储对象属性)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span><span class="params">(object)</span>:</span></span><br><span class="line">    _state = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls, *args, **kwargs)</span>:</span></span><br><span class="line">        ob = super(Singleton,cls).__new__(cls, *args, **kwargs)</span><br><span class="line">        ob.__dict__ = cls._state</span><br><span class="line">    <span class="keyword">return</span> ob</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(Singleton)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 类B即为单例类</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p>使用 <strong><em>_new_\</em></strong> 方法</p>
-<blockquote>
+</ul>
+<ul>
+<li>使用 <strong><em>_new_\</em></strong> 方法<blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls, *args, **kwargs)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> hasattr(cls, <span class="string">'_instance'</span>):</span><br><span class="line">            orig = super(Singleton, cls)</span><br><span class="line">            cls._instance = orig.__new__(cls, *args, **kwargs)</span><br><span class="line">        rerurn cls._instance</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(Singleton)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 类A即为单例类</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><p>补充 :</p>
 <ul>
 <li><p><strong><em>_new_\</em></strong> 方法：</p>
 <blockquote>
-<p>a.它是一个类级别的静态方法。通常用于控制生成一个新实例的过程。</p>
-<p>b.返回的是一个实例化出来的实例</p>
+<p>a.它是一个类级别的静态方法。通常用于控制生成一个新实例的过程。<br>b.返回的是一个实例化出来的实例</p>
 </blockquote>
 </li>
 <li><p><strong>super()</strong>方法：</p>
 <blockquote>
-<p>返回一个父类或兄弟类类型的代理对象，让你能够调用一些从继承过来的方法。</p>
-<p>它有两个典型作用：</p>
-<p>a. 在单继承的类层次结构中，super()可用于引用父类而不显式父类名称，从而使代码更易于维护。</p>
-<p>b. 在多重继承中，可以保证公共父类仅被执行一次</p>
+<p>返回一个父类或兄弟类类型的代理对象，让你能够调用一些从继承过来的方法。<br>它有两个典型作用：<br>a. 在单继承的类层次结构中，super()可用于引用父类而不显式父类名称，从而使代码更易于维护。<br>b. 在多重继承中，可以保证公共父类仅被执行一次</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ul>
-<p>​</p>
-</li>
+<ol start="3">
 <li><p>is 和 == 的区别</p>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: a = <span class="string">"hi"</span>  </span><br><span class="line">In [<span class="number">2</span>]: b = <span class="string">"hi"</span></span><br><span class="line">In [<span class="number">3</span>]: print(a <span class="keyword">is</span> b)  <span class="comment"># True</span></span><br><span class="line">In [<span class="number">4</span>]: print(a == b)  <span class="comment"># True</span></span><br><span class="line">	<span class="comment"># id(a) = id(b)</span></span><br><span class="line">    </span><br><span class="line">In [<span class="number">5</span>]: c = <span class="string">"hi spurs"</span></span><br><span class="line">In [<span class="number">6</span>]: d = <span class="string">"hi spurs"</span></span><br><span class="line">In [<span class="number">7</span>]: print(c <span class="keyword">is</span> d)  <span class="comment"># False</span></span><br><span class="line">In [<span class="number">8</span>]: print(c == d)  <span class="comment"># True</span></span><br><span class="line">	<span class="comment"># id(c) != id(d)</span></span><br><span class="line">    </span><br><span class="line">In [<span class="number">9</span>]: e = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">In [<span class="number">10</span>]: f = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">In [<span class="number">11</span>]: print(e <span class="keyword">is</span> f)  <span class="comment"># False</span></span><br><span class="line">In [<span class="number">12</span>]: print(e == f)  <span class="comment"># True</span></span><br><span class="line">    <span class="comment"># id(e) != id(f)</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">In [<span class="number">13</span>]: g = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">In [<span class="number">14</span>]: h = g</span><br><span class="line">In [<span class="number">15</span>]: print(g <span class="keyword">is</span> h)  <span class="comment"># True</span></span><br><span class="line">In [<span class="number">16</span>]: print(g == h)  <span class="comment"># True</span></span><br><span class="line">    <span class="comment"># id(g) = id(h)</span></span><br></pre></td></tr></table></figure>
@@ -622,11 +623,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">正则表达式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">正则表达式</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
               </li>
              
               <li class="article-tag-list-item">

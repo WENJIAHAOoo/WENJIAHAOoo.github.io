@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="交换变量值 一般我们都会使用 1234def swap(x,y):    temp = x    x = y    y = temp  但是, 还有一种更具Python风格的实现方式, 性能更好 12def swap(x,y):    x, y = y, x       实现单例模式的几种方式  什么是单例模式: 是一种常用的软件设计模式，该模式的主要目的是确保某一个类只有一个实例存在">
+  <meta name="description" content="加油!">
 <meta name="keywords" content="python,面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="7道经典面试题">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.wenjhaoo.cn&#x2F;undefined&#x2F;2019-11-10%207%E9%81%93%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="Jiahao">
-<meta property="og:description" content="交换变量值 一般我们都会使用 1234def swap(x,y):    temp = x    x = y    y = temp  但是, 还有一种更具Python风格的实现方式, 性能更好 12def swap(x,y):    x, y = y, x       实现单例模式的几种方式  什么是单例模式: 是一种常用的软件设计模式，该模式的主要目的是确保某一个类只有一个实例存在">
+<meta property="og:description" content="加油!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-17T06:44:39.568Z">
+<meta property="og:updated_time" content="2019-11-18T08:50:02.244Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -235,7 +235,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
+    <p>加油!</p>
+<a id="more"></a>
 
 <ol>
 <li><p>交换变量值</p>
@@ -255,24 +256,21 @@
 <li><p>什么是单例模式: 是一种常用的软件设计模式，该模式的主要目的是确保<strong>某一个类只有一个实例存在</strong></p>
 </li>
 <li><ol>
-<li><p>使用<strong>模块</strong></p>
-<blockquote>
+<li>使用<strong>模块</strong><blockquote>
 <p>其实，<strong>Python 的模块就是天然的单例模式</strong>，因为模块在第一次导入时，会生成 <code>.pyc</code> 文件，当第二次导入时，就会直接加载 <code>.pyc</code> 文件，而不会再次执行模块代码。因此，我们只需把相关的函数和数据定义在一个模块中，就可以获得一个单例对象了。</p>
 </blockquote>
 </li>
 </ol>
 </li>
 <li><ol start="2">
-<li><p>使用<strong>装饰器</strong></p>
-<blockquote>
+<li>使用<strong>装饰器</strong><blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Singleton</span><span class="params">(cls)</span>:</span></span><br><span class="line">    _instance = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_singleton</span><span class="params">(*args, **kargs)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> _instance:</span><br><span class="line">            _instance[cls] = cls(*args, **kargs)</span><br><span class="line">        <span class="keyword">return</span> _instance[cls]</span><br><span class="line">    <span class="keyword">return</span> _singleton</span><br><span class="line"><span class="meta">@Singleton</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x=<span class="number">0</span>)</span>:</span></span><br><span class="line">        self.x = x</span><br><span class="line">a1 = A(<span class="number">2</span>)</span><br><span class="line">a2 = A(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ol>
 </li>
 <li><ol start="3">
-<li><p>使用<strong>共享属性</strong></p>
-<blockquote>
+<li>使用<strong>共享属性</strong><blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建实例时把所有实例的__dict__指向同一个字典,这样它们都具有相同的属性和方法(类的__dict__存储对象属性)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span><span class="params">(object)</span>:</span></span><br><span class="line">    _state = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls, *args, **kwargs)</span>:</span></span><br><span class="line">        ob = super(Singleton,cls).__new__(cls, *args, **kwargs)</span><br><span class="line">        ob.__dict__ = cls._state</span><br><span class="line">    <span class="keyword">return</span> ob</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(Singleton)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 类B即为单例类</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
@@ -632,6 +630,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
               </li>
              
@@ -640,15 +642,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">正则表达式</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">

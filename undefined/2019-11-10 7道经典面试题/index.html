@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Jiahao">
 <meta property="og:description" content="加油!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T08:57:20.926Z">
+<meta property="og:updated_time" content="2019-11-18T09:20:30.148Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -253,9 +253,8 @@
 <ol start="2">
 <li><p><strong>实现单例模式的几种方式</strong></p>
 <ul>
-<li>什么是单例模式: 是一种常用的软件设计模式，该模式的主要目的是确保<strong>某一个类只有一个实例存在</strong></li>
-</ul>
-<ol>
+<li><p>什么是单例模式: 是一种常用的软件设计模式，该模式的主要目的是确保<strong>某一个类只有一个实例存在</strong></p>
+</li>
 <li><p>使用<strong>模块</strong></p>
 <blockquote>
 <p>其实，<strong>Python 的模块就是天然的单例模式</strong>，因为模块在第一次导入时，会生成 <code>.pyc</code> 文件，当第二次导入时，就会直接加载 <code>.pyc</code> 文件，而不会再次执行模块代码。因此，我们只需把相关的函数和数据定义在一个模块中，就可以获得一个单例对象了。</p>
@@ -275,7 +274,8 @@
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls, *args, **kwargs)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> hasattr(cls, <span class="string">'_instance'</span>):</span><br><span class="line">            orig = super(Singleton, cls)</span><br><span class="line">            cls._instance = orig.__new__(cls, *args, **kwargs)</span><br><span class="line">        rerurn cls._instance</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(Singleton)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 类A即为单例类</span></span><br></pre></td></tr></table></figure>
 </blockquote>
-<p>补充 :</p>
+</li>
+<li><p>补充 :</p>
 <ul>
 <li><p><strong><em>_new_\</em></strong> 方法：</p>
 <blockquote>
@@ -293,7 +293,7 @@
 </li>
 </ul>
 </li>
-</ol>
+</ul>
 <p>​</p>
 </li>
 <li><p>is 和 == 的区别</p>
@@ -622,6 +622,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">正则表达式</a>
               </li>
              
@@ -630,7 +634,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -638,19 +642,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">数据分析</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

@@ -215,8 +215,141 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>加油!</p>
-    
+    <a id="more"></a>
+
+<ol>
+<li><p>交换变量值</p>
+<p>一般我们都会使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">swap</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    temp = x</span><br><span class="line">    x = y</span><br><span class="line">    y = temp</span><br></pre></td></tr></table></figure>
+
+<p>但是, 还有一种更具Python风格的实现方式, 性能更好</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">swap</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    x, y = y, x</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p><strong>实现单例模式的几种方式</strong></p>
+<ul>
+<li><p>什么是单例模式: 是一种常用的软件设计模式，该模式的主要目的是确保<strong>某一个类只有一个实例存在</strong></p>
+</li>
+<li><ol>
+<li><p>使用<strong>模块</strong></p>
+<blockquote>
+<p>其实，<strong>Python 的模块就是天然的单例模式</strong>，因为模块在第一次导入时，会生成 <code>.pyc</code> 文件，当第二次导入时，就会直接加载 <code>.pyc</code> 文件，而不会再次执行模块代码。因此，我们只需把相关的函数和数据定义在一个模块中，就可以获得一个单例对象了。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li><p>使用<strong>装饰器</strong></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Singleton</span><span class="params">(cls)</span>:</span></span><br><span class="line">    _instance = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_singleton</span><span class="params">(*args, **kargs)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> _instance:</span><br><span class="line">            _instance[cls] = cls(*args, **kargs)</span><br><span class="line">        <span class="keyword">return</span> _instance[cls]</span><br><span class="line">    <span class="keyword">return</span> _singleton</span><br><span class="line"><span class="meta">@Singleton</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x=<span class="number">0</span>)</span>:</span></span><br><span class="line">        self.x = x</span><br><span class="line">a1 = A(<span class="number">2</span>)</span><br><span class="line">a2 = A(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="3">
+<li><p>使用<strong>共享属性</strong></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建实例时把所有实例的__dict__指向同一个字典,这样它们都具有相同的属性和方法(类的__dict__存储对象属性)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span><span class="params">(object)</span>:</span></span><br><span class="line">    _state = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls, *args, **kwargs)</span>:</span></span><br><span class="line">        ob = super(Singleton,cls).__new__(cls, *args, **kwargs)</span><br><span class="line">        ob.__dict__ = cls._state</span><br><span class="line">    <span class="keyword">return</span> ob</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(Singleton)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 类B即为单例类</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li><p>使用 <strong><em>_new_\</em></strong> 方法</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls, *args, **kwargs)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> hasattr(cls, <span class="string">'_instance'</span>):</span><br><span class="line">            orig = super(Singleton, cls)</span><br><span class="line">            cls._instance = orig.__new__(cls, *args, **kwargs)</span><br><span class="line">        rerurn cls._instance</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(Singleton)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 类A即为单例类</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>补充 :</p>
+<ul>
+<li><p><strong><em>_new_\</em></strong> 方法：</p>
+<blockquote>
+<p>a.它是一个类级别的静态方法。通常用于控制生成一个新实例的过程。</p>
+<p>b.返回的是一个实例化出来的实例</p>
+</blockquote>
+</li>
+<li><p><strong>super()</strong>方法：</p>
+<blockquote>
+<p>返回一个父类或兄弟类类型的代理对象，让你能够调用一些从继承过来的方法。</p>
+<p>它有两个典型作用：</p>
+<p>a. 在单继承的类层次结构中，super()可用于引用父类而不显式父类名称，从而使代码更易于维护。</p>
+<p>b. 在多重继承中，可以保证公共父类仅被执行一次</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>​</p>
+</li>
+<li><p>is 和 == 的区别</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: a = <span class="string">"hi"</span>  </span><br><span class="line">In [<span class="number">2</span>]: b = <span class="string">"hi"</span></span><br><span class="line">In [<span class="number">3</span>]: print(a <span class="keyword">is</span> b)  <span class="comment"># True</span></span><br><span class="line">In [<span class="number">4</span>]: print(a == b)  <span class="comment"># True</span></span><br><span class="line">	<span class="comment"># id(a) = id(b)</span></span><br><span class="line">    </span><br><span class="line">In [<span class="number">5</span>]: c = <span class="string">"hi spurs"</span></span><br><span class="line">In [<span class="number">6</span>]: d = <span class="string">"hi spurs"</span></span><br><span class="line">In [<span class="number">7</span>]: print(c <span class="keyword">is</span> d)  <span class="comment"># False</span></span><br><span class="line">In [<span class="number">8</span>]: print(c == d)  <span class="comment"># True</span></span><br><span class="line">	<span class="comment"># id(c) != id(d)</span></span><br><span class="line">    </span><br><span class="line">In [<span class="number">9</span>]: e = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">In [<span class="number">10</span>]: f = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">In [<span class="number">11</span>]: print(e <span class="keyword">is</span> f)  <span class="comment"># False</span></span><br><span class="line">In [<span class="number">12</span>]: print(e == f)  <span class="comment"># True</span></span><br><span class="line">    <span class="comment"># id(e) != id(f)</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">In [<span class="number">13</span>]: g = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">In [<span class="number">14</span>]: h = g</span><br><span class="line">In [<span class="number">15</span>]: print(g <span class="keyword">is</span> h)  <span class="comment"># True</span></span><br><span class="line">In [<span class="number">16</span>]: print(g == h)  <span class="comment"># True</span></span><br><span class="line">    <span class="comment"># id(g) = id(h)</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li>总结: <ul>
+<li><strong>is *<em>是检查两个对象是否指向同一块内存空间，而 *</em>==</strong> 是检查他们的值是否相等。可以看出，is 是比 == 更严格的检查，is 返回True表明这两个对象指向同一块内存，值也一定相同。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>可变对象和不可变对象</p>
+<ul>
+<li><strong>可变对象</strong>创建后可改变但_<strong>地址</strong>_不会改变，即变量指向的还是原来的变量；<strong>不可变对象</strong>创建之后便不能改变，如果改变则会指向一个新的对象。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>dict、list是可变对象，str、int、tuple、float是不可变对象。</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">In [<span class="number">2</span>]: print(id(a))  <span class="comment"># 1988124992072</span></span><br><span class="line">In [<span class="number">3</span>]: a[<span class="number">0</span>]=<span class="number">5</span></span><br><span class="line">In [<span class="number">4</span>]: print(id(a))  <span class="comment"># 1988124992072</span></span><br><span class="line">In [<span class="number">5</span>]: a.append(<span class="number">5</span>)</span><br><span class="line">In [<span class="number">6</span>]: print(id(a))  <span class="comment"># 1988124992072</span></span><br><span class="line">In [<span class="number">7</span>]: b = a</span><br><span class="line">In [<span class="number">8</span>]: print(id(b))  <span class="comment"># 1988124992072</span></span><br><span class="line">In [<span class="number">11</span>]: b[<span class="number">0</span>] = <span class="number">6</span></span><br><span class="line">In [<span class="number">12</span>]: print(a)  <span class="comment"># [6, 2, 3, 5]</span></span><br><span class="line">In [<span class="number">13</span>]: print(b)  <span class="comment"># [6, 2, 3, 5]</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line">In [<span class="number">9</span>]: c = b[:]</span><br><span class="line">In [<span class="number">10</span>]: print(id(c))  <span class="comment"># 1988125551944</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>例子中，对a修改元素、添加元素，变量a还是指向原来的对象</p>
+<p>将a赋值给b后，变量b和a都指向同一个对象，因此修改b的元素值也会影响a。</p>
+<p>变量c是对b的切片操作的返回值，切片操作相当于<strong>浅拷贝</strong>，会生成一个新的对象，因此c指向的对象不再是b所指向的对象，对c的操作不会改变b的值。</p>
+</li>
+</ul>
+<ol start="5">
+<li><p>连接字符串用join还是+</p>
+<p>​    当用操作符+连接字符串的时候，每执行一次+都会申请一块新的内存，然后复制上一个+操作的结果和本次操作的右操作符到这块内存空间，因此用+连接字符串的时候会涉及好几次内存申请和复制。而join在连接字符串的时候，会先计算需要多大的内存存放结果，然后一次性申请所需内存并将字符串复制过去，这是为什么join的性能优于+的原因。所以在连接字符串数组的时候，我们应考虑优先使用join。</p>
+</li>
+<li><p>理解__new__和__init__的区别</p>
+<p>__init__: 初始化方法，实例方法</p>
+<p>__new__：构造方法，创建实例，静态方法</p>
+<p><strong>__new__</strong>方法用于创建对象并返回对象，当返回对象时会自动调用<strong>__init__</strong>方法进行初始化。</p>
+</li>
+<li><p>with与上下文管理器With基本语法</p>
+<p><code>with</code></p>
+<p>​    with 用open函数打开文件，然后进行文件操作，等操作完成时，它会帮我们<strong>自动</strong>调用close函数关闭文件    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'test.py'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'hello world'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​    若不用with 则要手动关闭文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   f = open(<span class="string">'test.py'</span>, <span class="string">'w'</span>)</span><br><span class="line">   f.write(<span class="string">'hello world'</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">   f.close()</span><br></pre></td></tr></table></figure>
+
+<p><code>上下文管理器</code></p>
+<p>​    一个实现了<em>\</em>enter__和__exit__方法的对象就称之为<strong>上下文管理器</strong></p>
+<p>​    <em>\</em>enter__方法在语句体执行之前进入运行时上下文，__exit__在语句体执行完后从运行时上下文退出。</p>
+<p>​    在实际应用中，<em>\</em>enter__一般用于资源分配，如打开文件、连接数据库、获取线程锁；__exit__一般用于资源释放，如关闭文件、关闭数据库连接、释放线程锁。</p>
+</li>
+<li><p>finally是什么</p>
+<p>​    无论try语句中是否抛出异常，finally中的语句一定会被执行。</p>
+<p>​    由于finally的这个特性，finally经常被用来做一些清理工作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   f = open(<span class="string">'test.py'</span>, <span class="string">'w'</span>)</span><br><span class="line">   f.write(<span class="string">'hello world'</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">   f.close()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 官方文档写出: The finally clause <strong>is also executed “on the way out” when any other clause of the try statement is left via a break, continue or return statement</strong>.</p>
+</blockquote>
+<p>​    重点部分用粗体标出了，翻成中文就是try块中包含break、continue或者return语句的，在离开try块之前，finally中的语句也会被执行。</p>
+<ul>
+<li>finally中使用return会导致很多问题。实际应用中，不推荐在finally中使用return返回。</li>
+</ul>
+</li>
+</ol>
+
     
 
     
@@ -1199,11 +1332,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">服务器</a>
               </li>
              
               <li class="article-tag-list-item">

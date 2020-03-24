@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.wenjhaoo.cn">
-  <title>Archives | Jiahao</title>
+  <title>多任务-&gt;协程 | Jiahao</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="欢迎来到知识天堂!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jiahao">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.wenjhaoo.cn&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="这是有关协程的任务嗷">
+<meta name="keywords" content="多任务">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多任务-&gt;协程">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.wenjhaoo.cn&#x2F;undefined&#x2F;2019%E5%B9%B4&#x2F;2019-07-13%20%E5%8D%8F%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="Jiahao">
-<meta property="og:description" content="欢迎来到知识天堂!">
+<meta property="og:description" content="这是有关协程的任务嗷">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-15T13:59:41.670Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Jiahao" type="application/atom+xml">
@@ -180,283 +182,301 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2019年/2019-07-13 协程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2020%E5%B9%B4/B%E7%AB%99%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/" class="archive-article-date">
-        <time datetime="2020-03-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-20</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2020%E5%B9%B4/B%E7%AB%99%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/" target="_blank">B站产品分析报告</a>
   
+    <h1 class="article-title" itemprop="name">
+      多任务-&gt;协程
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<a href="/undefined/2019%E5%B9%B4/2019-07-13%20%E5%8D%8F%E7%A8%8B/" class="archive-article-date">
+        <time datetime="2019-07-13T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">9分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>这是有关协程的任务嗷</p>
+<a id="more"></a>
+
+<h1 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h1><h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
+<li><p>迭代： 是访问集合元素的一种方式，用 <kbd>for....in...</kbd>从 <kbd>list、tuple、str</kbd>等类型中依次取数据，这种遍历也称之为==迭代==</p>
+</li>
+<li><p>迭代对象：可以通过 <kbd>for....in...</kbd>这类语句迭代读取数据的对象</p>
+</li>
+<li><p>迭代器：是一个可以记住遍历的位置的对象。</p>
+</li>
+</ul>
+<hr>
+<h5 id="实现一个可迭代对象"><a href="#实现一个可迭代对象" class="headerlink" title="实现一个可迭代对象"></a>实现一个可迭代对象</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Classmate</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.names = list()</span><br><span class="line">        self.current_num = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.names.append(name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""如果想要一个对象称为一个　可以迭代的对象，即可以使用for，那么必须实现__iter__方法"""</span></span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"><span class="comment"># 调用iter(xxobj)的时候 只要__iter__方法返回一个 迭代器即可</span></span><br><span class="line"><span class="comment"># 至于是自己 还是 别的对象都可以的, 但是要保证是一个迭代器</span></span><br><span class="line"><span class="comment"># (即实现了 __iter__  __next__方法)</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.current_num &lt; len(self.names):</span><br><span class="line">            ret = self.names[self.current_num]</span><br><span class="line">            self.current_num += <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> ret</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">classmate = Classmate()</span><br><span class="line">classmate.add(<span class="string">"老王"</span>)</span><br><span class="line">classmate.add(<span class="string">"王二"</span>)</span><br><span class="line">classmate.add(<span class="string">"张三"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># print("判断classmate是否是可以迭代的对象:", isinstance(classmate, Iterable))</span></span><br><span class="line"><span class="comment"># classmate_iterator = iter(classmate)</span></span><br><span class="line"><span class="comment"># print("判断classmate_iterator是否是迭代器:", isinstance(classmate_iterator, Iterator))</span></span><br><span class="line"><span class="comment"># print(next(classmate_iterator))</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> classmate:</span><br><span class="line">    print(name)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="iter-函数-与-next-函数"><a href="#iter-函数-与-next-函数" class="headerlink" title="iter()函数 与 next()函数"></a>iter()函数 与 next()函数</h5><ul>
+<li>==list、tuple==等都是可迭代对象，我们可以通过==iter()函数==获取这些可迭代对象的迭代器。然后我们可以对获取到的迭代器不断使用next()函数来获取下一条数据。==iter()函数==实际上就是调用了可迭代对象的 ==__ iter __== 方法。</li>
+</ul>
+<hr>
+<h5 id="如何判断一个对象是否是迭代器"><a href="#如何判断一个对象是否是迭代器" class="headerlink" title="如何判断一个对象是否是迭代器"></a>如何判断一个对象是否是迭代器</h5><p>可以使用<kbd> isinstance() </kbd>判断一个对象是否是<kbd> Iterator </kbd>对象</p>
+<pre><code>In [56]: from collections import Iterator
+
+In [57]: isinstance([], Iterator)
+Out[57]: False
+
+In [58]: isinstance(iter([]), Iterator)
+Out[58]: True
+
+In [59]: isinstance(iter(&quot;abc&quot;), Iterator)
+Out[59]: True</code></pre><hr>
+<h5 id="迭代器Iterator"><a href="#迭代器Iterator" class="headerlink" title="迭代器Iterator"></a>迭代器Iterator</h5><blockquote>
+<p>一个实现了 <strong>iter</strong>方法和<strong>next</strong>方法的对象，就是迭代器。</p>
+</blockquote>
+<hr>
+<h5 id="for…in…循环的本质"><a href="#for…in…循环的本质" class="headerlink" title="for…in…循环的本质"></a>for…in…循环的本质</h5><ul>
+<li><p>for item in Iterable 循环的本质就是先通过iter()函数获取可迭代对象Iterable的迭代器，然后对获取到的迭代器不断调用next()方法来获取下一个值并将其赋值给item，当遇到StopIteration的异常后循环结束。</p>
+<hr>
+</li>
+</ul>
+<h4 id="斐波拉契数列（Fibonacci）"><a href="#斐波拉契数列（Fibonacci）" class="headerlink" title="斐波拉契数列（Fibonacci）"></a>斐波拉契数列（Fibonacci）</h4><blockquote>
+<ul>
+<li>数列中第一个数为0，第二个数为1，其后的每一个数都可由前两个数相加得到：<br>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, …</li>
+</ul>
+</blockquote>
+<pre><code>nums = list()
+a, b, i = 0, 1, 0
+while i &lt; 10:
+    nums.append(a)
+    a, b = b, a + b
+    i += 1
+for num in nums:
+    print(num)</code></pre><h4 id="迭代器实现斐波那契数列"><a href="#迭代器实现斐波那契数列" class="headerlink" title="迭代器实现斐波那契数列"></a>迭代器实现斐波那契数列</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fibonacci</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, all_num)</span>:</span></span><br><span class="line">        self.all_num = all_num</span><br><span class="line">        self.current_num = <span class="number">0</span></span><br><span class="line">        self.a = <span class="number">0</span></span><br><span class="line">        self.b = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.current_num &lt; self.all_num:</span><br><span class="line">            ret = self.a</span><br><span class="line">        </span><br><span class="line">            self.a, self.b = self.b, self.a+self.b</span><br><span class="line">            self.current_num += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> ret</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> StopIteration</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fibo = Fibonacci(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> fibo:</span><br><span class="line">    print(num)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><ul>
+<li>生成器是一类特殊的迭代器。</li>
+</ul>
+<hr>
+<h4 id="生成器实现斐波那契数列"><a href="#生成器实现斐波那契数列" class="headerlink" title="生成器实现斐波那契数列"></a>生成器实现斐波那契数列</h4><ul>
+<li>简单来说：只要在def中有yield关键字的 就称为 生成器<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_num</span><span class="params">(all_num)</span>:</span></span><br><span class="line">    print(<span class="string">"----1---"</span>)</span><br><span class="line">    <span class="comment"># a = 0</span></span><br><span class="line">    <span class="comment"># b = 1</span></span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    current_num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> current_num &lt; all_num:</span><br><span class="line">        print(<span class="string">"----2---"</span>)</span><br><span class="line">        <span class="comment"># print(a)</span></span><br><span class="line">        <span class="keyword">yield</span> a  <span class="comment"># 如果一个函数中有yield语句，那么这个就不在是函数，而是一个生成器的模板</span></span><br><span class="line">        print(<span class="string">"----3---"</span>)</span><br><span class="line">        a, b = b, a+b</span><br><span class="line">        current_num += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"----4---"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果在调用create_num的时候，发现这个函数中有yield那么此时，不是调用函数，而是创建一个生成器对象</span></span><br><span class="line">obj = create_num(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">ret = next(obj)</span><br><span class="line">print(ret)</span><br><span class="line"></span><br><span class="line">ret = next(obj)</span><br><span class="line">print(ret)</span><br><span class="line"></span><br><span class="line">obj2 = create_num(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">ret = next(obj2)</span><br><span class="line">print(ret)</span><br><span class="line"></span><br><span class="line"><span class="comment"># for num in obj:</span></span><br><span class="line"><span class="comment">#    print(num)</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><ul>
+<li>使用了yield关键字的函数不再是函数，而是生成器。（使用了yield的函数就是生成器）</li>
+<li>yield关键字有两点作用：<ul>
+<li>保存当前运行状态（断点），然后暂停执行，即将生成器（函数）挂起</li>
+<li>将yield关键字后面表达式的值作为返回值返回，此时可以理解为起到了return的作用</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>可以使用next()函数让生成器从断点处继续执行，即唤醒生成器（函数）</li>
+</ul>
+<hr>
+<h4 id="通过异常判断生成器已经结束"><a href="#通过异常判断生成器已经结束" class="headerlink" title="通过异常判断生成器已经结束"></a>通过异常判断生成器已经结束</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_num</span><span class="params">(all_num)</span>:</span></span><br><span class="line">    <span class="comment"># a = 0</span></span><br><span class="line">    <span class="comment"># b = 1</span></span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    current_num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> current_num &lt; all_num:</span><br><span class="line">        <span class="comment"># print(a)</span></span><br><span class="line">        <span class="keyword">yield</span> a  <span class="comment"># 如果一个函数中有yield语句，那么这个就不在是函数，而是一个生成器的模板</span></span><br><span class="line">        a, b = b, a+b</span><br><span class="line">        current_num += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"ok...."</span></span><br><span class="line"></span><br><span class="line">obj2 = create_num(<span class="number">50</span>) <span class="comment"># 这时调用，不是在调用函数，而是创建一个生成器对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        ret = next(obj2)</span><br><span class="line">        print(ret)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> ret:</span><br><span class="line">        print(ret.value)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="用send启动生成器"><a href="#用send启动生成器" class="headerlink" title="用send启动生成器"></a>用send启动生成器</h4><ul>
+<li>可以使用<kbd>next()</kbd>函数来唤醒生成器继续执行外，还可以使用<kbd>send()</kbd>函数来唤醒执行。使用<kbd>send()</kbd>函数的一个好处是可以在唤醒的同时向断点处传入一个附加数据</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_num</span><span class="params">(all_num)</span>:</span></span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    current_num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> current_num &lt; all_num:</span><br><span class="line">        ret = <span class="keyword">yield</span> a</span><br><span class="line">        print(<span class="string">"&gt;&gt;&gt;ret&gt;&gt;&gt;&gt;"</span>, ret)</span><br><span class="line">        a, b = b, a+b</span><br><span class="line">        current_num += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">obj = create_num(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># obj.send(None)  # send一般不会放到第一次启动生成器，如果非要这样做 那么传递None</span></span><br><span class="line"></span><br><span class="line">ret = next(obj)</span><br><span class="line">print(ret)</span><br><span class="line"></span><br><span class="line"><span class="comment"># send里面的数据会 传递给第5行，当做yield a的结果，然后ret保存这个结果,,, </span></span><br><span class="line"><span class="comment"># send的结果是下一次调用yield时 yield后面的值</span></span><br><span class="line">ret = obj.send(<span class="string">"hahahha"</span>)  </span><br><span class="line">print(ret)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="协程—yield"><a href="#协程—yield" class="headerlink" title="协程—yield"></a>协程—yield</h2><ul>
+<li>协程是python个中另外一种实现多任务的方式</li>
+<li>通俗的理解：在一个线程中的某个函数，可以在任何地方保存当前函数的一些临时变量等信息，然后切换到另外一个函数中执行，注意不是通过调用函数的方式做到的，并且切换的次数以及什么时候再切换到原来的函数都由开发者自己确定</li>
+</ul>
+<h5 id="使用yield完成多任务"><a href="#使用yield完成多任务" class="headerlink" title="使用yield完成多任务"></a>使用yield完成多任务</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">task_1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        print(<span class="string">"---1----"</span>)</span><br><span class="line">        time.sleep(<span class="number">0.1</span>)</span><br><span class="line">        <span class="keyword">yield</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">task_2</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        print(<span class="string">"---2----"</span>)</span><br><span class="line">        time.sleep(<span class="number">0.1</span>)</span><br><span class="line">        <span class="keyword">yield</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    t1 = task_1()</span><br><span class="line">    t2 = task_2()</span><br><span class="line">    <span class="comment"># 先让t1运行一会，当t1中遇到yield的时候，再返回到24行，然后</span></span><br><span class="line">    <span class="comment"># 执行t2，当它遇到yield的时候，再次切换到t1中</span></span><br><span class="line">    <span class="comment"># 这样t1/t2/t1/t2的交替运行，最终实现了多任务....协程</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        next(t1)</span><br><span class="line">        next(t2)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="协程—greenlet"><a href="#协程—greenlet" class="headerlink" title="协程—greenlet"></a>协程—greenlet</h2><ul>
+<li>为了更好使用协程来完成多任务，python中的<kbd>greenlet</kbd>模块对其封装，从而使得切换任务变的更加简单</li>
+<li>ubantu 中安装greenlet：<kbd>sudo pip3 install greenlet</li>
+</ul>
+<h5 id="使用greenlet完成多任务"><a href="#使用greenlet完成多任务" class="headerlink" title="使用greenlet完成多任务"></a>使用greenlet完成多任务</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> greenlet <span class="keyword">import</span> greenlet</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        print(<span class="string">"---A--"</span>)</span><br><span class="line">        gr2.switch()</span><br><span class="line">        time.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test2</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        print(<span class="string">"---B--"</span>)</span><br><span class="line">        gr1.switch()</span><br><span class="line">        time.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">gr1 = greenlet(test1)</span><br><span class="line">gr2 = greenlet(test2)</span><br><span class="line"></span><br><span class="line"><span class="comment">#切换到gr1中运行</span></span><br><span class="line">gr1.switch()</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="协程-gevent"><a href="#协程-gevent" class="headerlink" title="协程---gevent"></a>协程---gevent</h3><ul>
+<li>python还有一个比<kbd>greenlet</kbd>更强大的并且能够==自动切换任务==的模块<kbd>==gevent==</kbd></li>
+<li>ubantu中安装：<kbd>pip3 install gevent</li>
+</ul>
+<h4 id="genvent实现多任务"><a href="#genvent实现多任务" class="headerlink" title="genvent实现多任务"></a>genvent实现多任务</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gevent</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f1</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        print(gevent.getcurrent(), i)</span><br><span class="line">        <span class="comment"># time.sleep(0.5)</span></span><br><span class="line">        gevent.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f2</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        print(gevent.getcurrent(), i)</span><br><span class="line">        <span class="comment"># time.sleep(0.5)</span></span><br><span class="line">        gevent.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f3</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        print(gevent.getcurrent(), i)</span><br><span class="line">        <span class="comment"># time.sleep(0.5)</span></span><br><span class="line">        gevent.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"----1---"</span>)</span><br><span class="line">g1 = gevent.spawn(f1, <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"----2---"</span>)</span><br><span class="line">g2 = gevent.spawn(f2, <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"----3---"</span>)</span><br><span class="line">g3 = gevent.spawn(f3, <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"----4---"</span>)</span><br><span class="line">g1.join()</span><br><span class="line">g2.join()</span><br><span class="line">g3.join()</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="genvent打补丁"><a href="#genvent打补丁" class="headerlink" title="genvent打补丁"></a>genvent打补丁</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gevent</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey</span><br><span class="line"></span><br><span class="line">monkey.patch_all()  <span class="comment"># 打补丁，将下面的延时操作变成 gevent.sleep(0.5)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f1</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        print(gevent.getcurrent(), i)</span><br><span class="line">        <span class="comment">#用来模拟一个耗时操作，注意不是time模块中的sleep</span></span><br><span class="line">        time.sleep(<span class="number">0.5</span>)  <span class="comment"># 若没有上面的补丁，则这句话没效果，就是安顺序执行，不是多任务</span></span><br><span class="line">		 <span class="comment">#遇到延时等待，切换到下一个执行 </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f2</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        print(gevent.getcurrent(), i)</span><br><span class="line">        time.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f3</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        print(gevent.getcurrent(), i)</span><br><span class="line">        time.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">gevent.joinall([</span><br><span class="line">    gevent.spawn(f1, <span class="number">5</span>),</span><br><span class="line">    gevent.spawn(f2, <span class="number">5</span>),</span><br><span class="line">    gevent.spawn(f3, <span class="number">5</span>)</span><br><span class="line">])</span><br><span class="line"><span class="comment"># g1.join()</span></span><br><span class="line"><span class="comment"># g2.join()</span></span><br><span class="line"><span class="comment"># g3.join()</span></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><kbd>gevent</kbd>任务切换是需要堵塞，如，当执行到 f1 里的 ==time.sleep(0.5)== 时， <kbd>gevent</kbd>就发现遇到了延时，程序处于等待状态，这时， <kbd>gevent</kbd> 就会切换到 f2 中执行，同理，就实现了多任务（并发）</li>
+</ul>
+<hr>
+<h4 id="简单总结"><a href="#简单总结" class="headerlink" title="简单总结"></a>简单总结</h4><pre><code>1.进程是资源分配的单位
+2.线程是操作系统调度的单位
+3.进程切换需要的资源很最大，效率很低
+4.线程切换需要的资源一般，效率一般（当然了在不考虑GIL的情况下）
+5.协程切换任务资源很小，效率高
+6.多进程、多线程根据cpu核数不一样可能是并行的，但是协程是在一个线程中 所以是并发</code></pre>
+    
+
+    
+
+    
+
   </div>
-</article>
-  
+  <div class="article-info article-info-index">
     
     
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019%E5%B9%B4/2019-09-03%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90matplotlib/" class="archive-article-date">
-        <time datetime="2019-09-03T13:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019%E5%B9%B4/2019-09-03%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90matplotlib/" target="_blank">数数数据分析-&gt;matplotlib</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">数据分析</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">多任务</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.wenjhaoo.cn/undefined/2019%E5%B9%B4/2019-07-13%20%E5%8D%8F%E7%A8%8B/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019%E5%B9%B4/2019-08-30%20Django%E7%9A%84%E6%A8%A1%E5%9E%8BV/" class="archive-article-date">
-        <time datetime="2019-08-30T13:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/undefined/2019%E5%B9%B4/2019-07-14%20%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          并发下载器-&gt;爬虫
+        
+      </div>
+    </a>
+  
+  
+    <a href="/undefined/2019%E5%B9%B4/2019-07-12%20%E8%BF%9B%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">多任务-&gt;进程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019%E5%B9%B4/2019-08-30%20Django%E7%9A%84%E6%A8%A1%E5%9E%8BV/" target="_blank">Django-&gt;模型V</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019%E5%B9%B4/2019-08-28%20Django%E7%9A%84%E6%A8%A1%E5%9E%8BM/" class="archive-article-date">
-        <time datetime="2019-08-28T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019%E5%B9%B4/2019-08-28%20Django%E7%9A%84%E6%A8%A1%E5%9E%8BM/" target="_blank">Django-&gt;模型M</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019%E5%B9%B4/2019-08-26%20Django%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-        <time datetime="2019-08-26T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019%E5%B9%B4/2019-08-26%20Django%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" target="_blank">Django-&gt;基础</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/undefined/2019%E5%B9%B4/2019-08-24%20jquery/" class="archive-article-date">
-        <time datetime="2019-08-24T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/undefined/2019%E5%B9%B4/2019-08-24%20jquery/" target="_blank">前端-&gt;jQuery</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
+
 
 
           </div>
@@ -497,8 +517,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
